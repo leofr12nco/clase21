@@ -1,0 +1,26 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Cursos Encontrados</h1>
+    <p>Acá va la info de los Cursos</p>
+
+    <p>Estamos buscando la camada: {{camada}}</p>
+
+    {%if cursos%}
+
+    <ul>
+        {%for curso in cursos%}
+            <li>{{curso.nombre}}</li>
+            <li>{{curso.camada}}</li>
+            <li>{{curso.numero_dia}}</li>
+        {%endfor%}
+    </ul>
+    {%endif%}
+  
+
+{% endblock %}
